@@ -18,4 +18,6 @@
 3) Select project to submit
 
 ## How to push work to Github
-1) 
+1) In terminal, type => git add -A
+2) In terminal, type => git commit -m "description of commit"
+3) In terminal, type => git push
