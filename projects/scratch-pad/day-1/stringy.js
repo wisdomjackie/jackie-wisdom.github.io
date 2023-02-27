@@ -86,8 +86,18 @@ return string.toLowerCase().split(' ').join('-');
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+/*
+I: two parameters: one string and one single character
+O: a boolean value that reports whether the first character of the string is approximately equal to the single character
+C:
+E:
+  */  
 
-    
+// determine if first character in string is appx equal to single char
+if (string[0].toLowerCase() == char.toLowerCase()) {
+    return true
+} else return false
+
 
     // YOUR CODE ABOVE HERE //
 }
@@ -106,11 +116,16 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+//determine if last characer of string is appx equal to single char
+if (string[string.length - 1].toLowerCase() == char.toLowerCase()) {
+    return true
+} else return false
 
 
     // YOUR CODE ABOVE HERE //
 }
+console.log(endsWith('Max', 'x'));
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
