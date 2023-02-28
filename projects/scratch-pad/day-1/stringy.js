@@ -134,11 +134,15 @@ console.log(endsWith('Max', 'x'));
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+// given two strings, use concat to combine them into one
+return stringOne.concat(stringTwo);
 
 
     // YOUR CODE ABOVE HERE //
 }
+
+//test concat function
+console.log(concat('baller', 'town'));
 
 /**
  * Given any number of Strings, return all of them joined together.
@@ -153,6 +157,8 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
+    return args.join('');
+    
 
 
     // YOUR CODE ABOVE HERE //
