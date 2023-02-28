@@ -22,8 +22,15 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
+  
+    //create a function that returns input string in reverse
+
+
+function reverseString(string) {
+  return string.split('').reverse().join('');
+}
+
+console.log(reverseString('hello'));
     
     // YOUR CODE GOES ABOVE HERE //
 }
