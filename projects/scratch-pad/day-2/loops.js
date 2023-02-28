@@ -62,7 +62,13 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+
+  //use for in loop
+  for (var key in object) {
+    //print its keys
+    console.log(key);
+
+  }
   
   
   
@@ -74,7 +80,13 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+    //create new array
+    var newArray = [];
+  //use for in loop
+  for (var key in object) {
+    // return array containing values
+    return Object.values(object);
+  }
   
   
   
