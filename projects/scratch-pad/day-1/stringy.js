@@ -217,6 +217,13 @@ if (stringOne < stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+if (stringOne > stringTwo) {
+    return 1
+} else if (stringOne < stringTwo) {
+    return -1
+} else return 0
+
+
 
 
 
@@ -241,3 +248,11 @@ if((typeof process !== 'undefined') &&
     module.exports.sortAscending = sortAscending
     module.exports.sortDescending = sortDescending;
 }
+//create a function that returns input string in reverse
+
+
+function reverseString(string) {
+    return string.split('').reverse().join('');
+ }
+
+ console.log(reverseString('hello'));

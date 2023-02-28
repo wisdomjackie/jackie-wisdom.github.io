@@ -4,3 +4,10 @@ describe("#reverse-string", function () {
         expect(reverseString('goodbye')).to.equal('eybdoog');
     });
 });
+
+
+function reverseString(string) {
+    return string.split('').reverse().join('');
+ }
+
+ console.log(reverseString('hello'));
