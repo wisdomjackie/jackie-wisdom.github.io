@@ -158,7 +158,7 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
     return args.join('');
-    
+
 
 
     // YOUR CODE ABOVE HERE //
@@ -175,8 +175,10 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+// if stringOne is longer return stringOne. If stringTwo is longer, return stringTwo
+if (stringOne.length > stringTwo.length) {
+    return stringOne
+} else return stringTwo
 
     // YOUR CODE ABOVE HERE //
 }
@@ -190,8 +192,17 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+/*
+I: any two strings
+O: 1 or -1 depending on alphabetical order
+C: NA
+E: if they are alphabetically equal, return 0
+*/
+if (stringOne < stringTwo) {
+    return 1
+  } else if (stringOne > stringTwo) {
+    return -1
+  } else return 0
 
     // YOUR CODE ABOVE HERE //
 }
