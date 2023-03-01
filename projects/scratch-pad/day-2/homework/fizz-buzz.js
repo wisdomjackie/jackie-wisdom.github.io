@@ -12,6 +12,23 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+    //loop from numbers 1 to 100
+for (var i = 1; i < 101; i++) {
+    //determine if divisible by 3 and 5
+  if (i % 15 === 0) {
+    //print 'FizzBuzz'
+    console.log('FizzBuzz');
+    //determine if divisible by 3
+  } else if (i % 3 === 0) {
+    // print 'Fizz'
+    console.log('Fizz');
+    //determine if divisible by 5 
+  } else if (i % 5 === 0) {
+    //print 'Buzz'
+    console.log ('Buzz');
+    //if else, print the number
+  } else console.log(i);
+}
 
 
 
