@@ -43,19 +43,27 @@ function createLessThanFilter(base) {
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
+
+
+
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    return function(givenString) {
-        if (givenString[0] == startsWith) {
-          
-        } return true
-    }
-    
-    
-    
+    //console log parameter to test
+    console.log('This is startsWith',startsWith);
+    //return another function with given string as parameter
+    return function(string) {
+        //console log parameter to test
+      console.log('This is string',string)
+        //if the first index of given string is not equal to startsWith
+         if (string[0].toLowerCase() !== startsWith.toLowerCase()) {
+           //then false
+            return false
+         } else return true
+        }
+
     // YOUR CODE ABOVE HERE //
 }
-console.log(createStartsWithFilter('j')('jackie'))
+
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -67,7 +75,7 @@ function createEndsWithFilter(endsWith) {
     //return a function that takes given string as paramter
     return function(string) {
         //that returns boolean value comparing final character of given string to endswith
-        return string[string.length - 1] == endsWith
+        return string[string.length - 1].toLowerCase() == endsWith.toLowerCase()
     }
     
     
@@ -75,7 +83,6 @@ function createEndsWithFilter(endsWith) {
     // YOUR CODE ABOVE HERE //
 }
 
-console.log(createEndsWithFilter('e')('jackie'))
 
 /** 
  * Given an Array of Strings and a Function designed to modify a String, 
@@ -139,4 +146,4 @@ if((typeof process !== 'undefined') &&
     module.exports.createEndsWithFilter = createEndsWithFilter;
     module.exports.modifyStrings = modifyStrings;
     module.exports.allStringsPass = allStringsPass;   
-}
+    }
