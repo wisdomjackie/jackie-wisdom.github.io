@@ -13,7 +13,9 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+       return value > base
+    }
     
     
     
@@ -27,7 +29,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+        return value < base
+    }
     
     
     
@@ -41,12 +45,17 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(givenString) {
+        if (givenString[0] == startsWith) {
+          
+        } return true
+    }
     
     
     
     // YOUR CODE ABOVE HERE //
 }
+console.log(createStartsWithFilter('j')('jackie'))
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -55,12 +64,18 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    //return a function that takes given string as paramter
+    return function(string) {
+        //that returns boolean value comparing final character of given string to endswith
+        return string[string.length - 1] == endsWith
+    }
     
     
     
     // YOUR CODE ABOVE HERE //
 }
+
+console.log(createEndsWithFilter('e')('jackie'))
 
 /** 
  * Given an Array of Strings and a Function designed to modify a String, 
@@ -71,7 +86,16 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    //create storage array for later!
+    var newArray = [];
+    //create loop to access each string in strings array
+    for (var i = 0; i < strings.length; i++) {
+      // create modified string variable that equals each value of strings array modified by modify function
+        var modifiedStrings = modify(strings[i]);
+      // push modified string values into new array
+      newArray.push(modifiedStrings)
+    } return newArray
+
     
     
     
