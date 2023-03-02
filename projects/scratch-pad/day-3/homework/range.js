@@ -23,9 +23,27 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
+    //first create new array to push them into!
+    var newArray = [];
+    //IF start is less than end
+    if (start < end) {
+    //use a while loop because i couldnt get for loop to work
+        var count = start
+        while (count <= end) {
+        //push into new array
+        newArray.push(count);
+        count++
+        } 
+    }
+    else if (start > end){
+        var countdown = start
+        while (countdown >= end) {
+            //push into new array
+            newArray.push(countdown);
+            countdown--
+        } 
+    } return newArray
+  
     
     // YOUR CODE GOES ABOVE HERE //
 }

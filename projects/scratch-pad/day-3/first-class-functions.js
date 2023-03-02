@@ -113,10 +113,19 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    //for loop to access each value in strings
+    for (var i = 0; i < strings.length; i++) {
+        // if all tested indexes of strings do not equal true
+        if (test(strings[i]) === false) {
+          //then results are false
+           var results = false
+          //return them
+          return results
+        } else results = true
+
+    }
+    return results;
+ 
     // YOUR CODE ABOVE HERE //
 }
 
