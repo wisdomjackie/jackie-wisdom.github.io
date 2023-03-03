@@ -54,10 +54,62 @@ function makeContactList() {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        }, 
+        //implement addContact
+        addContact: function(contact) {
+          //return contacts array with contact pushed into it
+            return contacts.push(contact)
+        }, 
+      
+      //implement fullName function
+      findContact: function(fullName) {
+        //return contact object if found in contact list
+        //first a for loop to access each object in array
+        for (var i = 0; i < contacts.length; i++) {
+          //if first name index plus last name index matches fullName parameter
+          if (contacts[i].nameFirst + ' ' + contacts[i].nameLast === fullName) {
+            //then return the contact object
+            return contacts[i]
+            //if not, return undefined
+          } else return undefined
         }
-    }
 
+      }, 
+      
+      //implement remove contact function
+      removeContact: function(contact) {
+        //that takes a contact object to be removed from the contact-list-- but does it REMOVE it though?? and how
+        //for loop to access each object in the contacts array
+        for (var i = 0; i < contacts.length; i++) {
+          //if the object at the index matches the parameter, which could be first name, last name, or ID
+          if (contacts[i].nameFirst === contact.nameFirst && contacts[i].nameLast === contact.nameLast && contacts[i].id === contact.id) {
+            //then remove that contact object using splice, beginning at index i, removing one, adding nothing
+            contacts.splice(contacts[i], 1);
+          }
+        }//it doesn't say to return anything right? just take object to be removed
+      },
+      
+      //add a printAllContactNames() function
+      printAllContactNames: function() {
+        //return a String formated with all the full-names of the list separated with a line break
+        //try defining the variable up here
+        var fullNameList = '';
+      //for loop to access each object in the array. Can I use i again or will that mess it up???
+        for (var i = 0; i < contacts.length; i++) {
+          //now pull the firstname and lastname values out of each object at each index and return that with line breaks after all EXCEPT the mf last one 
+          // if its NOT the final object in the string
+          if (i !== contacts.length - 1) {
+          fullNameList += contacts[i].nameFirst + ' ' + contacts[i].nameLast + '\n'}
+            //concatenate the final value at the end
+            else fullNameList += contacts[contacts.length - 1].nameFirst + ' ' + contacts[contacts.length - 1].nameLast
+           //return that full name list
+        
+          
+        } return fullNameList
+      }
+    }
 }
+
 
 
 
