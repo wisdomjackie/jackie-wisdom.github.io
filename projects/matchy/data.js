@@ -131,6 +131,24 @@ console.log(animals.length);
 //create a variable called friends and assign to chosen data structure
 var friends = [];
 //write a function called getRandom, that takes our animals array and returns a random index of input array, using math.random
+function getRandom(arr) {
+return arr[Math.floor(Math.random())]
+
+}
+getRandom(animals); 
+
+//using the random interger that you just created, get random animal and add it's name to friends
+//invoke getRandom with animals
+var randomAnimal = getRandom(animals,9);
+
+console.log(randomAnimal.name,7);
+
+//add that name to friends
+friends.push(randomAnimal.name);
+
+//add friends list as a property also named friends on one of the animals in the animals array
+duck.friends = friends; 
+
 
 
 /**
