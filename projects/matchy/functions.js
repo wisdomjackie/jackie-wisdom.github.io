@@ -12,8 +12,24 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//implement a function declaration called search that takes a parameter representing an array of animals, and string of its name
+function search(arr, str) {
+    //look through the animals array and return the object if an animal with that name exists
+    // result var
+    var result;
+    //in order to look through the different objects in the array, use a for loop
+    for (var i = 0; i < arr.length; i++) {
+        //now set if condition for if that name exists
+        if (arr[i].name === str) {
+            //now return that whole object
+            result = arr[i]
+        } 
+    } if (result) {return result}
+    else return null
+    //returns null if no animal with that name exists
+}
 
-
+console.log(search(animals, 'Landon'),9)
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
