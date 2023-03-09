@@ -3,6 +3,14 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
+    //should take an object and return its values in an array
+    //create new array
+    var arr = [];
+    //for in loop to access values
+    for (var key in object) {
+        arr.push(object[key])
+    }//return array
+    return arr
 
 } 
 
@@ -11,6 +19,15 @@ function objectValues(object) {
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+    //take object and return all keys in string separated with spaces
+    //array variable
+    var arr = [];
+    //for in loop to access keys
+    for (var key in object) {
+        //push into array
+        arr.push(key)
+    }//array method to join all elements into string separated by space
+    return arr.join(' ')
 
 }
 
@@ -18,8 +35,17 @@ function keysToString(object) {
 // Function 3 - Values to String /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function valuesToString(object) {
-    
+function valuesToString(object) {//takes object and returns all STRING values as string separated by space
+    //hokai. create array to push values into
+    var arr = [];
+    //for in loop to access le values. THEN fire ze missiles. 
+    for (var key in object){
+        //ONLY IF they are STRANGZ
+        if (typeof object[key] === 'string')
+        //push them vals into array!
+        arr.push(object[key]);
+    }//array method to take them values out and join as string with spaces
+    return arr.join(' ')
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -27,6 +53,13 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
+    //takes argument and returns 'array' if it's an array and 'object' if it's an object
+    if (Array.isArray(collection)) {
+        //then return array
+        return 'array'
+    } else if (typeof collection === 'object') {
+        return 'object'
+    }
     
 }
 
@@ -35,6 +68,9 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
+    //take string of one word and return it with first letter capitalized
+    //use to upper case on the 0 index of string and concat that with the rest of the string sliced
+    return string[0].toUpperCase() + string.slice(1, string.length)
     
 }
 
@@ -43,6 +79,16 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
+    //first, split this string into an array
+    var arr = string.split(' ');
+    //declare second array
+    var secondArray = [];
+    //now access each item in the array with a for loop
+    for (var i = 0; i < arr.length; i++){
+        //uppercase each iterm
+        secondArray.push(arr[i][0].toUpperCase() + arr[i].slice(1));
+    }// now join that array back into a string
+    return secondArray.join(' ');
     
 }
 
@@ -51,6 +97,11 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+    //takes object with name property and returns Welcome name!
+    //name var to capitalize that name
+    var name = object.name[0].toUpperCase() + object.name.slice(1);
+    //concat for message
+    return 'Welcome ' + name + '!'
 
 }
 
@@ -59,6 +110,13 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+    //takes object with name and species and returns Name is a Species
+    //capital name variable
+    var name = object.name[0].toUpperCase() + object.name.slice(1)
+    //capital species variable
+    var species = object.species[0].toUpperCase() + object.species.slice(1)
+    // concat into return sentence
+    return name + ' is a ' + species
 
 }
 
@@ -67,7 +125,12 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 
 function maybeNoises(object) {
+    //if object has noises array, return as string separated by spaces; if no array or if empty, return there are no noises
+    if (object.noises && object.noises.length > 0) {
+        //join into string separated by spaces
+        return object.noises.join(' ')
 
+    } else return 'there are no noises'
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -75,6 +138,8 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
+    //takes string and word, return true if word is in string, otherwise return false
+    
 
 }
 
