@@ -139,8 +139,21 @@ function maybeNoises(object) {
 
 function hasWord(string, word) {
     //takes string and word, return true if word is in string, otherwise return false
+    //create new array for later
+    var arr = [];
+    //change stringe into array of words
+    var wordsArray = sting.split(' ');
+    //for loop to access values in words array
+    for (let i = 0; i < wordsArray.length; i++) {
+        //determine if element matches word
+        if (wordsArray[i] === word) {
+            //then return true
+            return true
+        }
+    }
     
-
+//else return false
+return false
 }
 
 //////////////////////////////////////////////////////////////////////
