@@ -142,7 +142,7 @@ function hasWord(string, word) {
     //create new array for later
     var arr = [];
     //change stringe into array of words
-    var wordsArray = sting.split(' ');
+    var wordsArray = string.split(' ');
     //for loop to access values in words array
     for (let i = 0; i < wordsArray.length; i++) {
         //determine if element matches word
