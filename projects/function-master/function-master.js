@@ -174,14 +174,15 @@ function isFriend(name, object) {
     //first determine if friends array exists at all
     if (object.friends) {
         //for loop to access values in object's friends array
-        for (let i = 0; i < object.friends; i++) {
+        for (let i = 0; i < object.friends.length; i++) {
+
             //determine if name matches elements in array
             if (object.friends[i] === name) {
                 //return true
                 return true
             }
         }
-    }
+    }//otherwise return false
 return false
 }
 
@@ -192,16 +193,36 @@ return false
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
-
+    //takes name and array, returns list of all names that name is not friends with
+    //create return array
+    var arr = [];
+    //for loop to access the different people objects in the main array
+    for (let i = 0; i < array.length; i++) {
+      //if name matches the name property of the object
+      if (array[i].name === name) {
+        //then look through their friends array
+        for (let j = 0; j < array[i].friends.length; j++){
+          //determine if object names are not on friends array list
+          if (array[i].friends[j] !== array[i].name){
+            //then push object names into return array
+            arr.push(array[i].name)
+          }
+        }
+      }
+    } return arr
 }
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
+    //takes object, key and value. update property key on object with value. if key does not exist on object, create it
+    object[key] = value
+    return object
 
-}
+};
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////
