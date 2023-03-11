@@ -161,16 +161,31 @@ return false
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
-
+    //should take name and object, add name to object's friends array and return object
+    object.friends.push(name);
+    return object
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function isFriend(name, object) {
-
+function isFriend(name, object) {    
+    //first determine if friends array exists at all
+    if (object.friends) {
+        //for loop to access values in object's friends array
+        for (let i = 0; i < object.friends; i++) {
+            //determine if name matches elements in array
+            if (object.friends[i] === name) {
+                //return true
+                return true
+            }
+        }
+    }
+return false
 }
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
