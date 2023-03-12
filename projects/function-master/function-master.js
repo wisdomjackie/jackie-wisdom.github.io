@@ -2,6 +2,7 @@
 // Function 1 - Object Values ////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+
 function objectValues(object) {
     //should take an object and return its values in an array
     //create new array
@@ -196,19 +197,14 @@ function nonFriends(name, array) {
     //takes name and array, returns list of all names that name is not friends with
     //create return array
     var arr = [];
+    var currentObj = null;
     //for loop to access the different people objects in the main array
     for (let i = 0; i < array.length; i++) {
       //if name matches the name property of the object
       if (array[i].name === name) {
-        //then look through their friends array
-        for (let j = 0; j < array[i].friends.length; j++){
-          //determine if object names are not on friends array list
-          if (array[i].friends[j] !== array[i].name){
-            //then push object names into return array
-            arr.push(array[i].name)
-          }
-        }
-      }
+        //then set current object to equal that object
+        var currentObj = array[i]
+      } else arr.push(array[i].name)
     } return arr
 }
 
@@ -229,15 +225,30 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
-}
+    for (var key in object) {
+      //takes object and array of strings. takes away any properties on object that are listed in array
+      //for loop to access values in array
+      for (let i = 0; i < array.length; i++) {
+          //if element is equal to a property name of object
+          if (array[i] === key) {
+            delete object[key]
+          }
+ }
+  
+    } return object
+  
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 16 - Dedup ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+    //takes and array and returns new array with all duplicates removed
+    //new array variable
+    var arr = [...new Set(array)];
 
+return arr
 }
 
 //////////////////////////////////////////////////////////////////////
