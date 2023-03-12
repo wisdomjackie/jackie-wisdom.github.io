@@ -35,8 +35,23 @@ function fizzBuzz() {
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard(rowsAndColumns) {//=> number of rows and columns for chessboard
-
+function drawChessboard(rowsAndColumns) {
+  //build the string by starting with an empty one
+  var board = '';
+  //outer loop to handle the lins
+  for (let i = 0; i < rowsAndColumns; i++) {        
+    //inner loop to handle characters on the lines
+    for (let a = 0; a < rowsAndColumns; a++) {
+      if ((i + a) % 2 === 0){
+           board += " ";
+         }
+         else {
+           board += "#";
+           }
+    } 
+           board += "\n"}
+  
+  console.log(board)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
