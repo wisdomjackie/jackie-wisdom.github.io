@@ -1,3 +1,5 @@
+/*
+
 Variables are named containers that store data. Variables can be declared with the keyword var. 
 
     var name;//declare variable name
@@ -163,3 +165,5 @@ To sum up the differences between these three types of variables:
            scoped to functions
            scoped to loop blocks
            scoped to if blocks
+
+           */

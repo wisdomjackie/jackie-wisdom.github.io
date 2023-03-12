@@ -197,17 +197,26 @@ function nonFriends(name, array) {
     //takes name and array, returns list of all names that name is not friends with
     //create return array
     var arr = [];
-    var currentObj = null;
+    var allNames = [];
+
     //for loop to access the different people objects in the main array
     for (let i = 0; i < array.length; i++) {
+      allNames.push(array[i].name);
       //if name matches the name property of the object
       if (array[i].name === name) {
-        //then set current object to equal that object
-        var currentObj = array[i]
-      } else arr.push(array[i].name)
-    } return arr
+        //for loop to access this objects friends
+        for (let a = 0; a < array[i].friends.length; a++){
+          //determine if already there
+          if (array[i].friends[a] !== array[i].name){
+            //then push into new array
+            arr.push(array[i].name)
+          }
+        }
+      
+      }
+    } return arr;
+  
 }
-
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
