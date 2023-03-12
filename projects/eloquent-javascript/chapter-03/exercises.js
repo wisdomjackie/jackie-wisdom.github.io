@@ -25,8 +25,19 @@ function isEven(num) {
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
-
+function countChars(string, char) {
+  var newArr = [];
+  //takes string as only arg and returns number indicating how many Bs
+  //split characters from string into array
+  var arr = string.split('');
+  //for loop to access each character
+  for (let i = 0; i < arr.length; i++){
+    //determine chars
+    if (arr[i] === char){
+      newArr.push(arr[i])
+    }
+      
+  } return newArr.length
 }
 
 ////////////////////////////////////////////////////////////////////////////////
