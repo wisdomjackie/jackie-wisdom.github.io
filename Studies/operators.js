@@ -89,3 +89,4 @@ instance of using the factory function called on the right.
     let landon = makeAnimal('Landon', 'brown', 'cat');
 
     landon instanseof cat; //=> true
+*/
